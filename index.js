@@ -1,8 +1,11 @@
-var elementList = document.querySelectorAll(".drum");
+var numberOfDrums = document.querySelectorAll(".drum").length;
 
-elementList.forEach(element => {
-    element.addEventListener("click", () => {
-        var audio = new Audio("sounds/tom-1.mp3");
-        audio.play();
+console.log(numberOfDrums);
+
+for (var i = 0; i < numberOfDrums; i++) {
+
+    document.querySelectorAll(".drum")[i].addEventListener("click", () => {
+        console.log("hello");
     })
-});
+
+};
